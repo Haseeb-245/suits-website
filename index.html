@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIR | Access Portal</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Entry Page Specific Styles */
+    .entry-portal {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), 
+                  url('suit.jpg') no-repeat center center/cover;
+    }
+
+    .portal-logo {
+      font-size: 4rem;
+      font-weight: 300;
+      letter-spacing: 5px;
+      color: var(--gold);
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .portal-logo span {
+      font-weight: 600;
+    }
+
+    .portal-options {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .portal-card {
+      width: 300px;
+      height: 400px;
+      background: rgba(26, 26, 26, 0.7);
+      border: 1px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .portal-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+    }
+
+    .portal-icon {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .portal-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .portal-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      .portal-options {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      .portal-card {
+        width: 280px;
+        height: 350px;
+      }
+      
+      .portal-logo {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="entry-portal">
+    <div class="portal-logo">NOIR <span>|</span></div>
+    <h2>Select Your Access Mode</h2>
+    
+    <div class="portal-options">
+      <div class="portal-card" onclick="window.location.href='main.html'">
+        <div class="portal-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h3 class="portal-title">Client Portal</h3>
+        <p class="portal-desc">
+          Enter as a client to browse our exclusive collection of luxury black suits and accessories.
+        </p>
+      </div>
+      
+      <div class="portal-card" onclick="window.location.href='admin.html'">
+        <div class="portal-icon">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <h3 class="portal-title">Admin Portal</h3>
+        <p class="portal-desc">
+          Access the administration panel to manage products, inventory, and client orders.
+        </p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

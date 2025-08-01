@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "Black Two Peice Suit",
+    "price": 120,
+    "image": "black.jpg",
+    "colors": ["Red", "Green", "Blue"]
+  },
+  {
+    "id": 2,
+    "name": "Grey Two Peice Suit",
+    "price": 175,
+    "image": "grey.jpg",
+    "colors": ["Black", "White"]
+  },
+
+    {
+    "id": 3,
+    "name": "Blue Two Peice Suit",
+    "price": 160,
+    "image": "blue.jpg",
+    "colors": ["Black", "White"]
+  },
+  {
+    "id": 4,
+    "name": "Charcoal Two Peice Suit",
+    "price": 15,
+    "image": "charcoal.png",
+    "colors": ["Blue", "White"]
+  }
+
+  
+]

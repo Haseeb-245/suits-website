@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOIR | Luxury Black Suits</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-moon"></i> NOIR</h1>
+    <nav>
+      <ul style="list-style: none ; display: flex; gap: 1rem; margin: 0; padding: 0;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#craftsmanship">Craftsmanship</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
+    </nav>
+    <div id="cart-counter"><i class="fas fa-shopping-cart"></i> <span>0</span></div>
+  </header>
+
+  <!-- Hero Section with Video Background -->
+  <section class="hero">
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/luxury-suits.mp4" type="video/mp4">
+        <!-- Fallback image -->
+        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" alt="Luxury suits">
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h2>Timeless Elegance, Modern Luxury</h2>
+      <p>Discover our curated collection of premium black suits, designed for those who appreciate the finer things in life.</p>
+      <a href="#collections" class="hero-btn">Explore Collection</a>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="products-section" id="products">
+    <div class="section-title">
+   
+    </div>
+    <main id="product-list"></main>
+  </section>
+
+  <!-- Collections Section -->
+  <section class="collections-section" id="collections">
+    <h2>Our Signature Collections</h2>
+    <p>Each collection represents a unique interpretation of modern elegance</p>
+    
+    <div class="collection-cards">
+      <div class="collection-card">
+        <img src="tie.jpg" alt="Black Tie Collection" class="collection-image">
+        <div class="collection-overlay">
+          <h3>Black Tie Collection</h3>
+          <p>Formal elegance redefined</p>
+        </div>
+      </div>
+      
+      <div class="collection-card">
+        <img src="excutive.jpg" alt="Executive Line" class="collection-image">
+        <div class="collection-overlay">
+          <h3>Executive Line</h3>
+          <p>Power dressing perfected</p>
+        </div>
+      </div>
+      
+      <div class="collection-card">
+        <img src="limited.jpg">
+        <div class="collection-overlay">
+          <h3>Limited Edition</h3>
+          <p>Exclusive craftsmanship</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship Section -->
+  <section class="craftsmanship-section" id="craftsmanship">
+    <div class="craftsmanship-image">
+    <img src="tailor.jpg" alt="Craftsmanship Image" class="craftsmanship-img">
+    </div>
+    <div class="craftsmanship-content">
+      <h2>The Art of Tailoring</h2>
+      <p>Each NOIR suit is a masterpiece of precision tailoring, requiring over 80 hours of hand craftsmanship by our master tailors. We source only the finest wools from Italy's premier mills, ensuring unparalleled quality and comfort.</p>
+      <p>Our heritage techniques, passed down through generations, combine with modern innovations to create suits that drape perfectly and stand the test of time.</p>
+      <a href="#" class="hero-btn">Discover Our Process</a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials">
+    <h2>Client Testimonials</h2>
+    <p>What our discerning clients say about NOIR</p>
+    
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p class="testimonial-text">The fit and finish of my NOIR suit is unparalleled. I've never worn anything that made me feel so confident.</p>
+        <p class="testimonial-author">— James W., London</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <p class="testimonial-text">The attention to detail is remarkable. I receive compliments every time I wear my NOIR suit.</p>
+        <p class="testimonial-author">— Thomas R., New York</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <p class="testimonial-text">Worth every penny. The craftsmanship is evident in every stitch. This is true luxury.</p>
+        <p class="testimonial-author">— Alexander B., Paris</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Modal -->
+  <section id="cart-modal" class="modal">
+    <div class="modal-content">
+      <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <div class="cart-total" id="cart-total">Total: $0</div>
+      <button onclick="checkout()"><i class="fas fa-credit-card"></i> Checkout</button>
+      <button onclick="closeCart()"><i class="fas fa-times"></i> Close</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

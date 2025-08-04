@@ -20,6 +20,20 @@
   margin: 0;
   padding: 0;
 }
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transition effects for sections */
+section {
+  transition: all 0.4s ease-out;
+}
+
+/* Adjust for fixed header */
+section[id] {
+  scroll-margin-top: 100px; /* Match your header height */
+}
 
 /* Transition effects when scrolling to section */
 .scrolling-to {
@@ -41,19 +55,7 @@ section {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* For staggered animations */
-section:nth-child(odd) {
-  transform: translateX(-20px);
-}
 
-section:nth-child(even) {
-  transform: translateX(20px);
-}
-
-section.in-view {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 .btn-gold {
   background: transparent;

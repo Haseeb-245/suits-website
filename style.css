@@ -21,6 +21,40 @@
   padding: 0;
 }
 
+/* Transition effects when scrolling to section */
+.scrolling-to {
+  animation: section-highlight 1.5s ease-out;
+}
+
+@keyframes section-highlight {
+  0% {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Optional: Fade-in effect for sections */
+section {
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* For staggered animations */
+section:nth-child(odd) {
+  transform: translateX(-20px);
+}
+
+section:nth-child(even) {
+  transform: translateX(20px);
+}
+
+section.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .btn-gold {
   background: transparent;
   color: var(--gold);

@@ -1,19 +1,40 @@
-// Global variables
-// Add this to your existing script.js
 document.addEventListener('DOMContentLoaded', function() {
-  // Add smooth transition when navigating between pages
-  const links = document.querySelectorAll('a[href^="#"], a[href^="."]');
-  
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
+  // Enhanced smooth scroll with transitions
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      // Skip non-section links
+      if (this.getAttribute('href') === '#') return;
+      
       e.preventDefault();
-      document.body.style.opacity = '0';
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 300);
+      
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        // Add transition class to target section
+        targetElement.classList.add('scrolling-to');
+        
+        // Calculate position with header offset
+        const headerHeight = document.querySelector('header')?.offsetHeight || 80;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+        
+        // Smooth scroll
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Remove transition class after scroll completes
+        setTimeout(() => {
+          targetElement.classList.remove('scrolling-to');
+        }, 1000);
+        
+        // Update URL
+        history.pushState(null, null, targetId);
+      }
     });
   });
-  
+
   // Fade in page content
   document.body.style.opacity = '1';
   document.body.style.transition = 'opacity 0.3s ease';

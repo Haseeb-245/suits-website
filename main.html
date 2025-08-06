@@ -99,17 +99,17 @@
     <p>What our discerning clients say about NOIR</p>
     
     <div class="testimonial-cards">
-      <div class="testimonial-card">
+      <div class="testimonial-card" id="testimonial1">
         <p class="testimonial-text">The fit and finish of my NOIR suit is unparalleled. I've never worn anything that made me feel so confident.</p>
         <p class="testimonial-author">— James W., London</p>
       </div>
       
-      <div class="testimonial-card">
+      <div class="testimonial-card" id="testimonial2">
         <p class="testimonial-text">The attention to detail is remarkable. I receive compliments every time I wear my NOIR suit.</p>
         <p class="testimonial-author">— Thomas R., New York</p>
       </div>
       
-      <div class="testimonial-card">
+      <div class="testimonial-card" id="testimonial3">
         <p class="testimonial-text">Worth every penny. The craftsmanship is evident in every stitch. This is true luxury.</p>
         <p class="testimonial-author">— Alexander B., Paris</p>
       </div>
@@ -119,13 +119,310 @@
   <!-- Cart Modal -->
   <section id="cart-modal" class="modal">
     <div class="modal-content">
+      
       <h2><i class="fas fa-shopping-cart"></i> Your Cart</h2>
       <ul id="cart-items"></ul>
       <div class="cart-total" id="cart-total">Total: $0</div>
-      <button onclick="checkout()"><i class="fas fa-credit-card"></i> Checkout</button>
-      <button onclick="closeCart()"><i class="fas fa-times"></i> Close</button>
+      <button class="add-to-cart-btn" onclick="checkout()"><i class="fas fa-credit-card"></i> Checkout</button>
+      <button class="add-to-cart-btn" onclick="closeCart()"><i class="fas fa-times"></i> Close</button>
     </div>
   </section>
+
+
+</div>
+
+</div>
+
+
+
+  </div>
+
+</section>
+<!-- Style Advisor Section -->
+<!-- Style Advisor Section -->
+<section class="style-advisor-section" id="style-advisor">
+  <div class="section-header">
+    <h2>NOIR STYLE ADVISOR</h2>
+    <p class="section-subtitle">Discover Your Signature Silhouette</p>
+    <div class="divider-line"></div>
+  </div>
+  
+  <div class="advisor-container">
+    
+    <!-- Step 1: Occasion -->
+    <div class="advisor-step active" data-step="1">
+      <h3>SELECT YOUR OCCASION</h3>
+      <div class="option-grid">
+        <button class="option-btn" data-option="formal">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-9-2h6v2h-6V4z"/>
+            </svg>
+          </div>
+          <span class="option-title">Business Attire</span>
+          <span class="option-subtitle">Boardroom Elegance</span>
+        </button>
+        
+        <button class="option-btn" data-option="wedding">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+          </div>
+          <span class="option-title">Wedding</span>
+          <span class="option-subtitle">Bridal Party</span>
+        </button>
+      </div>
+      
+      <div class="option-grid">
+        <button class="option-btn" data-option="evening">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z"/>
+            </svg>
+          </div>
+          <span class="option-title">Evening</span>
+          <span class="option-subtitle">Black Tie Affairs</span>
+        </button>
+        
+        <button class="option-btn" data-option="cocktail">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2v-6z"/>
+            </svg>
+          </div>
+          <span class="option-title">Cocktail</span>
+          <span class="option-subtitle">Social Gatherings</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Step 2: Fit -->
+    <div class="advisor-step" data-step="2">
+      <h3>SELECT YOUR PREFERRED FIT</h3>
+      <div class="option-grid">
+        <button class="option-btn" data-option="slim">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M6 20h12V4H6v16zm2-10h8v2H8v-2z"/>
+            </svg>
+          </div>
+          <span class="option-title">Slim Fit</span>
+          <span class="option-subtitle">Modern Contour</span>
+        </button>
+        
+        <button class="option-btn" data-option="classic">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+            </svg>
+          </div>
+          <span class="option-title">Classic Fit</span>
+          <span class="option-subtitle">Timeless Proportion</span>
+        </button>
+      </div>
+      
+      <div class="option-grid">
+        <button class="option-btn" data-option="modern">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15c0-1.66 1.34-3 3-3h2c1.66 0 3 1.34 3 3v1h2v-1c0-2.76-2.24-5-5-5h-2c-2.76 0-5 2.24-5 5v1h2v-1z"/>
+            </svg>
+          </div>
+          <span class="option-title">Modern Fit</span>
+          <span class="option-subtitle">Balanced Structure</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Step 3: Fabric -->
+    <div class="advisor-step" data-step="3">
+      <h3>SELECT YOUR FABRIC PREFERENCE</h3>
+      <div class="option-grid">
+        <button class="option-btn" data-option="wool">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/>
+            </svg>
+          </div>
+          <span class="option-title">Premium Wool</span>
+          <span class="option-subtitle">Year-Round Comfort</span>
+        </button>
+        
+        <button class="option-btn" data-option="cashmere">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM17.5 10.78c-1.23-.37-2.22-1.17-2.8-2.18l-1-1.6c-.41-.65-1.11-1-1.84-1-.78 0-1.59.5-1.78 1.44S7 23 7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3c1.44 1.83 3.31 3 5.5 3v-2c-1.85 0-3.45-1-4.35-2.45l-.96-1.65c-.38-.65-.99-1.1-1.7-1.1z"/>
+            </svg>
+          </div>
+          <span class="option-title">Cashmere Blend</span>
+          <span class="option-subtitle">Ultimate Softness</span>
+        </button>
+      </div>
+      
+      <div class="option-grid">
+        <button class="option-btn" data-option="linen">
+          <div class="option-icon">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+            </svg>
+          </div>
+          <span class="option-title">Linen Blend</span>
+          <span class="option-subtitle">Breathable Luxury</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Results Section -->
+    <div class="advisor-results">
+      <div class="result-header">
+        <h3>YOUR NOIR RECOMMENDATION</h3>
+        <div class="divider-line"></div>
+      </div>
+      
+      <div class="result-content">
+        <div class="result-image-container">
+          <div class="result-image"></div>
+          <div class="result-badge">CURATED SELECTION</div>
+        </div>
+        
+        <div class="result-details">
+          <h4 id="result-title">The Executive</h4>
+          <div class="specification">
+            <span class="spec-label">Collection:</span>
+            <span class="spec-value" id="result-collection">Signature Black</span>
+          </div>
+          <div class="specification">
+            <span class="spec-label">Fit:</span>
+            <span class="spec-value" id="result-fit">Classic</span>
+          </div>
+          <div class="specification">
+            <span class="spec-label">Fabric:</span>
+            <span class="spec-value" id="result-fabric">Super 150s Italian Wool</span>
+          </div>
+          <div class="specification">
+            <span class="spec-label">Tailoring:</span>
+            <span class="spec-value">Florentine Hand-Stitched</span>
+          </div>
+          <div class="price" id="result-price">$2,850</div>
+          <button class="btn-gold" id="restart-advisor">BEGIN NEW CONSULTATION</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3><i class="fas fa-moon"></i> NOIR</h3>
+      <p>Timeless Elegance, Modern Luxury</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#best-sellers">Best Sellers</a></li>
+        <li><a href="#craftsmanship">Craftsmanship</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, New York</p>
+      <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+      <p><i class="fas fa-envelope"></i> contact@noir-luxury.com</p>
+    </div>
+    
+    <div class="footer-newsletter">
+      <h4>Newsletter</h4>
+      <p>Subscribe for exclusive offers and styling tips</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2023 NOIR Luxury Suits. All rights reserved.</p>
+    <div class="legal-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Shipping Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Add this modal for product details -->
+<section id="product-modal" class="modal">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closeProductModal()"><i class="fas fa-times"></i></button>
+    <div class="product-modal-content">
+      <!-- Content will be dynamically added here -->
+    </div>
+  </div>
+</section>
+
+<!-- Add this modal for checkout address -->
+<section id="checkout-modal" class="modal">
+  <div class="modal-content">
+    <h2><i class="fas fa-map-marker-alt"></i> Shipping Information</h2>
+    <form id="address-form">
+      <div class="form-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Street Address</label>
+        <input type="text" id="address" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" required>
+      </div>
+      <div class="form-group">
+        <label for="state">State/Province</label>
+        <input type="text" id="state" required>
+      </div>
+      <div class="form-group">
+        <label for="zip">ZIP/Postal Code</label>
+        <input type="text" id="zip" required>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" required>
+          <option value="">Select Country</option>
+          <option value="US">United States</option>
+          <option value="UK">United Kingdom</option>
+          <option value="CA">Canada</option>
+          <option value="AU">Australia</option>
+          <!-- Add more countries as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required>
+      </div>
+      <div class="form-actions">
+        <button type="button" onclick="closeCheckoutModal()">Cancel</button>
+        <button type="submit">Complete Purchase</button>
+      </div>
+    </form>
+  </div>
+</section>
 
   <script src="script.js"></script>
 </body>
